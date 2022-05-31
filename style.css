@@ -1,5 +1,6 @@
 body{
     padding-bottom: 50px;
+    overscroll-behavior: none;
 }
 
 .picture{
@@ -36,9 +37,48 @@ body{
 
 .carouselContainer{
     background: royalblue;
-    height: 400px;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 25vw;
 }
-
+.row-carousel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4200px;
+    height: 100%;
+  }
+  .slider-inner {
+    position: absolute;
+    top: 5%;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .item {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .image_carousel {
+    position: absolute;
+    left: -100px;
+    width: 600px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 .title{
     font-size: 1.5em;
     margin-top: 100px;
@@ -77,3 +117,14 @@ body{
 .mode:hover{
     cursor: pointer;
 }
+.col-3 picture {
+    padding: 50px;
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .col-3 picture:hover {
+    transform: scale(1.5); }
