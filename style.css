@@ -14,6 +14,7 @@ body{
 
 .poke{
     font-weight: bold;
+    position: relative;
 }
 
 .chaser{
@@ -21,6 +22,9 @@ body{
     height: 50px;
     background: red;
     border-radius: 50%;
+    position: relative;
+    transition: all 20ms ease-in;
+    z-index: -1;
 }
 
 .runner{
@@ -28,15 +32,26 @@ body{
     height: 50px;
     background: green;
     border-radius: 50%;
+    z-index: -2;
+    position: relative;
+    transition: all 20ms ease-in;
 }
 
-.box{
+#chaserBox{
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
     border: 1px solid grey;
     height: 350px;
 }
-
+#runnerBox{
+    border: 1px solid grey;
+    height: 350px;
+    z-index: -1;
+    position: relative;
+    overflow: hidden;
+}
 .carouselContainer{
-    background: royalblue;
     position: fixed;
     top:0;
     left:0;
@@ -51,14 +66,14 @@ body{
     height: 100vh;
 }
 .slider {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 4200px;
-    height: 100%;
+    height: 80%;
   }
   .slider-inner {
-    position: absolute;
+    position: relative;
     top: 5%;
     height: 90%;
     width: 100%;
@@ -112,6 +127,7 @@ body{
     width: 50px;
     border: 1px solid grey;
     border-radius: 50%;
+    background-color: rgb(5, 28, 79);
 }
 
 .mode:hover{
