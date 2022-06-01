@@ -1,12 +1,3 @@
-Array.from(document.querySelectorAll(".letter")).forEach(el => {
-   el.innerText = randomLetter();
-});
-
-function randomLetter(){
-    const alphabet = "abcdefghijklmnopqrstuvwxyz"
-    return alphabet[Math.floor(Math.random() * alphabet.length)]
-}
-
 //carousel
 
 let images = [...document.querySelectorAll('.image_carousel')];
@@ -65,21 +56,6 @@ document.querySelector('.mode').addEventListener('click', () => {
     }
 })
 
-//chasing circle
-
-  let box = document.getElementById('chaserBox');
-  let chaser = document.getElementById('chaser');
-  
-  box.addEventListener('mousemove', (e) => {
-      let left = e.offsetX;
-      let top = e.offsetY;
-      chaser.style.left = `${left - 25}px`
-      chaser.style.top = `${top - 25}px`
-
-})
-
-
-
 // hover-pop-image
 
 const pokePop = Array.from(document.querySelectorAll('.poke'));
@@ -104,3 +80,43 @@ pokePop.forEach((name) => {
 
     })
 })
+
+//col
+
+let pictures = document.querySelectorAll('.image');
+var clicked = false;
+pictures.forEach (pic => {
+    pic.addEventListener('click', () => {
+        if(clicked == false) {
+            clicked = true;
+            pic.style.transform = "scale(2)";
+            pic.style.transition = "transform 0.50s ease";
+            // p inner pic = "text"
+        }
+        else {
+            clicked = false;
+            pic.style.transform = "scale(1)";
+            pic.style.transition = "transform 0.50s ease";            
+          }
+    })
+})
+
+//chasing circle
+
+let chaser = document.getElementById('chaser');
+document.getElementById('chaserBox').addEventListener('mousemove', function(e){
+    console.log(e);
+    chaser.style.marginLeft = e.clientX-20-68+'px';
+    chaser.style.marginTop = e.clientY-123-230+'px';
+})
+
+//letters
+
+Array.from(document.querySelectorAll(".letter")).forEach(el => {
+  el.innerText = randomLetter();
+});
+
+function randomLetter(){
+   const alphabet = "abcdefghijklmnopqrstuvwxyz"
+   return alphabet[Math.floor(Math.random() * alphabet.length)]
+}

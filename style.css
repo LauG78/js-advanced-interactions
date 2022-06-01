@@ -1,6 +1,7 @@
 body{
     padding-bottom: 50px;
     overscroll-behavior: none;
+    padding-top: 200px;
 }
 
 .picture{
@@ -23,8 +24,7 @@ body{
     background: red;
     border-radius: 50%;
     position: relative;
-    transition: all 20ms ease-in;
-    z-index: -1;
+    transition: 20ms;
 }
 
 .runner{
@@ -40,7 +40,7 @@ body{
 #chaserBox{
     position: relative;
     overflow: hidden;
-    z-index: -1;
+    padding: 0;
     border: 1px solid grey;
     height: 350px;
 }
@@ -57,6 +57,7 @@ body{
     left:0;
     width: 100%;
     height: 25vw;
+    z-index: 3;
 }
 .row-carousel{
     position: fixed;
@@ -72,7 +73,7 @@ body{
     width: 4200px;
     height: 80%;
   }
-  .slider-inner {
+.slider-inner {
     position: relative;
     top: 5%;
     height: 90%;
@@ -80,13 +81,13 @@ body{
     display: flex;
     justify-content: space-around;
   }
-  .item {
+.item {
     position: relative;
     width: 500px;
     height: 100%;
     overflow: hidden;
   }
-  .image_carousel {
+.image_carousel {
     position: absolute;
     left: -100px;
     width: 600px;
@@ -99,24 +100,20 @@ body{
     margin-top: 100px;
     margin-bottom: 20px;
 }
-
 .lightMode{
     background: rgb(245, 245, 245);
     color: rgb(10, 10, 10);
 }
-
 .darkMode{
     background: rgb(10, 10, 10);
     color: rgb(245, 245, 245);
 }
-
 .bigTitle{
     font-size: 2.5em;
     margin-top: 100px;
     margin-bottom: 50px;
     text-align: center;
 }
-
 .mode{
     position: fixed;
     bottom: 20px;
@@ -129,18 +126,13 @@ body{
     border-radius: 50%;
     background-color: rgb(5, 28, 79);
 }
-
 .mode:hover{
     cursor: pointer;
 }
-.col-3 picture {
-    padding: 50px;
-    background-color: green;
-    transition: transform .2s; /* Animation */
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
+.image {
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
   
-  .col-3 picture:hover {
-    transform: scale(1.5); }
+ 
